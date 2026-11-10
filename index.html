@@ -90,6 +90,11 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .build h3{font-family:var(--serif);font-weight:400;font-size:1.35rem;line-height:1.15;margin:0 0 8px}
 .build p{margin:0;color:var(--muted);font-size:.98rem}
 .build .t{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--leaf);display:block;margin-bottom:10px}
+.kora{margin-top:28px;border:1px solid var(--ink);padding:26px;background:var(--paper2)}
+.kora .t{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:10px}
+.kora h3{font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1;margin:0 0 12px}
+.kora p{margin:0 0 .8em;max-width:36em;font-size:1rem}
+.kora p:last-child{margin:0}
 /* research */
 .chart{border:1px solid var(--ink);padding:24px;background:var(--paper2)}
 .chart h3{font-family:var(--serif);font-weight:400;font-size:1.4rem;margin:0 0 2px}
@@ -146,6 +151,8 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .connect .d{font-size:.92rem;color:var(--muted);display:block}
 .connect .c.soon{opacity:.6}
 footer{border-top:1px solid var(--ink);padding-block:32px 60px;font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+footer .fq em{font-family:var(--sans);font-size:1.05rem;letter-spacing:0;text-transform:none;color:var(--ink)}
+footer .idk{opacity:.8}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </style>
 
@@ -176,19 +183,20 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="side"><p class="label">01 About</p><h2>Hello.</h2></div>
   <div class="body">
     <p class="lede">I am a People and Culture professional at heart who happens to spend her days recruiting.</p>
+    <ul class="chips" style="margin:0 0 1.2em"><li>Adaptable</li><li>Good with people</li><li>Inventive</li></ul>
     <p>I like the whole journey a person takes into a workplace: the job ad, the first conversation, the interview, the offer, and the part nobody talks about, which is how it all felt. I am happiest when a messy process turns into a clear one, and when I catch myself doing something by hand for the third time, I write a script.</p>
-    <p>Outside work I read, walk, lift, and nag my friends to move to my side of town so we can do all three together. I also help with a small online accessories and footwear business that belongs to my sister.</p>
+    <p>Outside work I read, walk, lift, and nag my friends to move to my side of town so we can do all three together. My dream is a cool mobile coffee shop that I run with my sister, who is a qualified pastry chef. I am a sucker for a pretty coffee stand.</p>
   </div>
 </div></section>
 
 <section id="proud"><div class="wrap grid">
-  <div class="side"><p class="label">02 Work</p><h2>What I am proud of</h2><p class="s">A few searches and systems, in my own words.</p></div>
+  <div class="side"><p class="label">02 Work</p><h2>What I do well</h2><p class="s">Processes I have automated, and people I have matched to the right seat.</p></div>
   <div class="body">
     <ul class="proud">
-      <li><span class="n">1</span><div><h3>The search nobody could close</h3><p>I took over a director search that had stalled for months, rebuilt how we found people, brought in a partner to assess the shortlist, and filled it with someone I had sourced myself.</p></div></li>
-      <li><span class="n">2</span><div><h3>A director, placed in a month</h3><p>I filled a senior analytics and planning director role within a month, and the role was later grown into a vice president position.</p></div></li>
-      <li><span class="n">3</span><div><h3>Hiring that runs itself, a little</h3><p>I built scheduling that lets candidates book their own interviews and timed assignments that go out on their own, so my time goes to people instead of calendars.</p></div></li>
-      <li><span class="n">4</span><div><h3>Hard briefs, honest conversations</h3><p>On-site only roles, local-only hiring, tight budgets. I like the searches where you have to be creative and honest with everyone at once.</p></div></li>
+      <li><span class="n">1</span><div><h3>Referral programmes that people use</h3><p>I took a staff referral programme from an idea people liked to a simple process they could follow and I could track.</p></div></li>
+      <li><span class="n">2</span><div><h3>Calendars that book themselves</h3><p>Senior leaders now book their own calls, so nobody spends a week going back and forth over email.</p></div></li>
+      <li><span class="n">3</span><div><h3>Hires who stay</h3><p>Everyone I have hired so far has made it through probation and is still there. None have left yet.</p></div></li>
+      <li><span class="n">4</span><div><h3>Reading a culture before choosing a person</h3><p>I take the time to understand how a place really works, then look for the person who will thrive in it. That is how the hires stay.</p></div></li>
     </ul>
   </div>
 </div></section>
@@ -199,10 +207,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     <ul class="edu">
       <li><div class="crest" aria-label="Kenyatta University">KU<img src="logos/ku.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">BA &middot; Counselling Psychology</p><h3>Kenyatta University</h3>
-        <p>I did not do well in the field. My mind loves a good challenge, and the psychology I was taught was mostly sitting at a desk listening to clients. Shoot me now. So in my third year, I took a break and went looking for something else.</p></div></li>
+        <p>Counselling psychology was not the right fit for me. The version I studied kept me at a desk, listening to clients, and I wanted something that kept my mind busier. In my third year I stepped away, found business studies, and came back during the pandemic to finish the degree.</p></div></li>
       <li><div class="crest" aria-label="African Leadership University">ALU<img src="logos/alu.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">International Business and Trade</p><h3>African Leadership University</h3>
-        <p>I loved how practical it was. This is where my love for data began. ALU taught me how to think critically, and it showed: I went back to KU during the Covid break and my final year was a success.</p></div></li>
+        <p>Hands-on, practical learning, and where my interest in data started. It taught me to question things properly, which is why my last stretch at Kenyatta went so well.</p></div></li>
       <li><div class="crest" aria-label="University of Liverpool">UoL<img src="logos/uol.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">MSc &middot; Data Science and AI</p><h3>University of Liverpool</h3>
         <p>I started last year and have taken a break, because it began to feel like the traditional education I had escaped. ALU set a standard for learning, and I will probably go back to a masters once I find an institution that works for my brain the way ALU did.</p></div></li>
@@ -216,8 +224,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="body">
     <div class="builds">
       <div class="build"><span class="t">Automation</span><h3>Candidate journey</h3><p>Apps Script, Forms and Calendar working together: interviews that book themselves and assignments that send on schedule.</p></div>
-      <div class="build"><span class="t">Product</span><h3>Kora</h3><p>A small tool for people teams. A spreadsheet today, Python next. Small on purpose, useful first.</p></div>
       <div class="build"><span class="t">Craft</span><h3>The application kit</h3><p>CVs, notes and outreach, drafted with Claude and edited by me until they sound like me.</p></div>
+    </div>
+    <div class="kora">
+      <span class="t">An idea I am still chasing</span>
+      <h3>Kora</h3>
+      <p>Hiring and people data lives in too many places. Kora is my idea for pulling it together and turning it into plain-language stories that a people team can act on.</p>
+      <p><strong>Where it stands:</strong> I have a working spreadsheet prototype, a plan to test it with a handful of HR managers, and a roadmap. What I am stuck on is the jump from planning to actually building it properly in Python.</p>
+      <p>The more time I spend in people and culture, the more the vision grows past simply centralising people's data. I am still working it out, and I hope nobody builds it before I do.</p>
     </div>
   </div>
 </div></section>
@@ -295,11 +309,6 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <li><div><h3>One role per company, not ten</h3><p>You may love what they love, but applying for a finance internship and a VP of People and Culture in the same week is a red flag.</p></div></li>
       <li><div><h3>People are biased, so make it work for you</h3><p>A clean, readable CV, preferably a PDF. Show up to interviews looking like you like yourself: good internet if virtual, a put-together look, clear speech. And for goodness' sake, be brief.</p></div></li>
     </ol>
-    <div class="coming">
-      <p class="label">Coming soon</p>
-      <h3>Faith, agency, and what I am unlearning</h3>
-      <p>I am a Pentecostal Christian, and I am writing about how organised religion has partly slowed my personal and professional progress by taking agency away from us. I am unlearning that, and still holding on to God, because believing in a higher being protects my sanity.</p>
-    </div>
   </div>
 </div></section>
 
@@ -311,12 +320,17 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <a class="c" href="https://www.linkedin.com/in/golda-masibo-680076156/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">The professional side</span><span class="d">Where to find my work history and say hello.</span></a>
       <div class="c soon"><span class="k">TikTok</span><span class="v">Coming soon</span><span class="d">Short videos, link on the way.</span></div>
     </div>
+    <div class="coming">
+      <p class="label">Coming soon on Substack</p>
+      <h3>Faith, agency, and what I am unlearning</h3>
+      <p>I am a Pentecostal Christian, and I am writing about how organised religion has partly slowed my personal and professional progress by taking agency away from us. I am unlearning that, and still holding on to God, because believing in a higher being protects my sanity.</p>
+    </div>
   </div>
 </div></section>
 </main>
 
 <footer><div class="wrap">
-  <span>Golda Masibo &middot; People and Culture, at heart</span>
+  <span class="fq"><em>&ldquo;Wherever you go, there you are.&rdquo;</em> <span class="idk">idk who said it first</span></span>
   <span>Made with Claude and Golda Masibo</span>
 </div></footer>
 
