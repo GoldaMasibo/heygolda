@@ -10,18 +10,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gloock&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..600&display=swap">
 <style>
 :root{
-  --paper:#F5EFE6;--paper2:#EDE5D8;--ink:#1E1417;--muted:#6B5C5F;--rule:#D6CABB;
-  --accent:#8C1D40;--accent-soft:#F1D3DA;--leaf:#2E6B4F;--grid:rgba(30,20,23,.055);
+  --paper:#FFFFFF;--paper2:#F3F3F4;--ink:#18161A;--muted:#66636B;--rule:#DEDDE1;
+  --accent:#8C1D40;--accent-soft:#F6E1E7;--leaf:#2E6B4F;--grid:rgba(24,22,26,.06);
   --serif:"Gloock","Georgia",serif;--sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#171012;--paper2:#21171A;--ink:#F4ECE4;--muted:#B7A7A9;--rule:#3A2C30;
-    --accent:#F08AA8;--accent-soft:#3D1F29;--leaf:#8CC9A8;--grid:rgba(244,236,228,.05);color-scheme:dark}
+    --paper:#121113;--paper2:#1C1A1E;--ink:#F3F0F4;--muted:#A9A5AE;--rule:#34313A;
+    --accent:#F08AA8;--accent-soft:#3A1F29;--leaf:#8CC9A8;--grid:rgba(243,240,244,.06);color-scheme:dark}
 }
 :root[data-theme="dark"]{
-  --paper:#171012;--paper2:#21171A;--ink:#F4ECE4;--muted:#B7A7A9;--rule:#3A2C30;
-  --accent:#F08AA8;--accent-soft:#3D1F29;--leaf:#8CC9A8;--grid:rgba(244,236,228,.05);color-scheme:dark}
+  --paper:#121113;--paper2:#1C1A1E;--ink:#F3F0F4;--muted:#A9A5AE;--rule:#34313A;
+  --accent:#F08AA8;--accent-soft:#3A1F29;--leaf:#8CC9A8;--grid:rgba(243,240,244,.06);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;
@@ -77,7 +77,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .edu li{display:grid;grid-template-columns:84px minmax(0,1fr);gap:22px;padding:26px 0;border-bottom:1px solid var(--rule)}
 .edu li:first-child{padding-top:0}
 .crest{width:84px;height:84px;border:1px solid var(--ink);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-size:1.15rem;background:var(--paper2);overflow:hidden}
-.crest img{width:100%;height:100%;object-fit:contain;padding:14px}
+.crest{position:relative}.crest img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:14px;background:var(--paper)}
 .edu .m{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
 .edu h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15;margin:0 0 8px}
 .edu p{margin:0 0 .5em;max-width:34em;font-size:1rem}
@@ -114,6 +114,14 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .book p{margin:0 0 .6em;max-width:34em;font-size:1rem}
 .verdict{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);padding:2px 10px;border-radius:99px;display:inline-block;margin-top:4px}
 @media(max-width:520px){.book{grid-template-columns:minmax(0,1fr)}.cover{max-width:130px}}
+/* places */
+.places{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:36px 28px}
+.place .ph{aspect-ratio:4/3;position:relative;overflow:hidden;display:grid;place-items:end start;padding:14px;font-family:var(--serif);font-size:1.5rem;color:#fff}
+.place .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.p1{background:linear-gradient(135deg,#2E6B4F,#12303A)}.p2{background:linear-gradient(135deg,#8C1D40,#3A1020)}.p3{background:linear-gradient(135deg,#C9822B,#6B2E1A)}.p4{background:linear-gradient(135deg,#1F5F8B,#13294B)}.p5{background:linear-gradient(135deg,#2A8C8C,#0F3C4A)}
+.place .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:12px 0 4px}
+.place h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15;margin:0 0 6px}
+.place p{margin:0;color:var(--muted);font-size:1rem}
 /* move */
 .track{margin-top:26px;border-top:1px solid var(--rule);padding-top:20px}
 .track svg{width:100%;max-width:420px;height:auto;display:block}
@@ -144,7 +152,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <header class="top"><div class="wrap">
   <a class="mark" href="#top">golda<i>.</i></a>
   <nav aria-label="Sections">
-    <a href="#about">About</a><a href="#proud">Work</a><a href="#school">School</a><a href="#builds">Builds</a><a href="#research">Research</a><a href="#shelf">Shelf</a><a href="#move">Move</a><a href="#notes">Notes</a><a href="#connect">Connect</a>
+    <a href="#about">About</a><a href="#proud">Work</a><a href="#school">School</a><a href="#builds">Builds</a><a href="#research">Research</a><a href="#shelf">Shelf</a><a href="#places">Places</a><a href="#move">Move</a><a href="#notes">Notes</a><a href="#connect">Connect</a>
   </nav>
 </div></header>
 
@@ -189,13 +197,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="side"><p class="label">03 School</p><h2>The long way round</h2><p class="s">Three degrees, one winding road.</p></div>
   <div class="body">
     <ul class="edu">
-      <li><div class="crest" aria-label="Kenyatta University">KU</div><div>
+      <li><div class="crest" aria-label="Kenyatta University">KU<img src="logos/ku.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">BA &middot; Counselling Psychology</p><h3>Kenyatta University</h3>
         <p>I did not do well in the field. My mind loves a good challenge, and the psychology I was taught was mostly sitting at a desk listening to clients. Shoot me now. So in my third year, I took a break and went looking for something else.</p></div></li>
-      <li><div class="crest" aria-label="African Leadership University">ALU</div><div>
+      <li><div class="crest" aria-label="African Leadership University">ALU<img src="logos/alu.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">International Business and Trade</p><h3>African Leadership University</h3>
         <p>I loved how practical it was. This is where my love for data began. ALU taught me how to think critically, and it showed: I went back to KU during the Covid break and my final year was a success.</p></div></li>
-      <li><div class="crest" aria-label="University of Liverpool">UoL</div><div>
+      <li><div class="crest" aria-label="University of Liverpool">UoL<img src="logos/uol.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">MSc &middot; Data Science and AI</p><h3>University of Liverpool</h3>
         <p>I started last year and have taken a break, because it began to feel like the traditional education I had escaped. ALU set a standard for learning, and I will probably go back to a masters once I find an institution that works for my brain the way ALU did.</p></div></li>
     </ul>
@@ -235,23 +243,34 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="shelf"><div class="wrap grid">
   <div class="side"><p class="label">06 Shelf</p><h2>Reading</h2><p class="s">Honest opinions, no stars.</p></div>
   <div class="body"><div class="books">
-    <div class="book"><div class="cover c1">Tomorrow Died Yesterday</div><div>
+    <div class="book"><div class="cover c1">Tomorrow Died Yesterday<img src="covers/tomorrow-died-yesterday.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Tomorrow Died Yesterday</h3><p class="au">Chimeka Garricks</p>
       <p>I loved it. The Asiama chapter, where soldiers go on a revenge mission, undid me. I read it at a sports club, holding back tears, wondering how Amaibi still found a way to acknowledge God after all that happened. I only wish it had been edited more: stray errors pulled me out of writing that is genuinely brilliant.</p>
       <span class="verdict">Loved it</span></div></div>
-    <div class="book"><div class="cover c2">Daring Greatly</div><div>
+    <div class="book"><div class="cover c2">Daring Greatly<img src="covers/daring-greatly.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Daring Greatly</h3><p class="au">Brené Brown</p>
       <p>Not for me. I do not like a book that arrives already labelled as personal development. I would rather read, think, and pull my own lessons out of it. That is where the critical thinking happens.</p>
       <span class="verdict">Mixed</span></div></div>
-    <div class="book"><div class="cover c3">Thinking in Systems</div><div>
+    <div class="book"><div class="cover c3">Thinking in Systems<img src="covers/thinking-in-systems.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Thinking in Systems</h3><p class="au">Donella Meadows</p>
       <p>Up next, hopefully. I will report back.</p>
       <span class="verdict">On deck</span></div></div>
   </div></div>
 </div></section>
 
+<section id="places"><div class="wrap grid">
+  <div class="side"><p class="label">07 Places</p><h2>Cities I love</h2><p class="s">African cities I have visited and would happily go back to.</p></div>
+  <div class="body"><div class="places">
+    <div class="place"><div class="ph p1"><span>Dar es Salaam</span><img src="photos/dar-es-salaam.jpg" alt="" onerror="this.remove()"></div><p class="meta">Tanzania &middot; 2024</p><h3>Dar es Salaam</h3><p>Libras chase balance, and Dar gets it right: sea air and a city that keeps moving, easy company and easy quiet. It suits how I like to live, a little social and a little slow, in equal measure.</p></div>
+    <div class="place"><div class="ph p2"><span>Mauritius</span><img src="photos/mauritius.jpg" alt="" onerror="this.remove()"></div><p class="meta">Mauritius</p><h3>Mauritius</h3><p>An island that still has a city in it. You get the beach days and the buzz without having to pick one.</p></div>
+    <div class="place"><div class="ph p3"><span>Kampala</span><img src="photos/kampala.jpg" alt="" onerror="this.remove()"></div><p class="meta">Uganda</p><h3>Kampala</h3><p>My twenties owe this city a thank you. The nights out, the people, the noise: just enough chaos to shake up a home-body remote worker who mostly lives at a slower pace.</p></div>
+    <div class="place"><div class="ph p4"><span>Accra</span><img src="photos/accra.jpg" alt="" onerror="this.remove()"></div><p class="meta">Ghana</p><h3>Accra</h3><p>I went with some of my favourite colleagues, which made it. Karaoke at The Honeysuckle and jollof at The Buka in Osu are both worth a second trip. We had a Timmmmeeee.</p></div>
+    <div class="place"><div class="ph p5"><span>Diani</span><img src="photos/diani.jpg" alt="" onerror="this.remove()"></div><p class="meta">Kenya &middot; 2022 and 2023</p><h3>Diani Beach</h3><p>I lost count of how many times I went in those two years. Think of it as Dar's little cousin: the same sea, a smaller and softer pace. Still a favourite.</p></div>
+  </div></div>
+</div></section>
+
 <section id="move"><div class="wrap grid">
-  <div class="side"><p class="label">07 Move</p><h2>My body serves me well</h2></div>
+  <div class="side"><p class="label">08 Move</p><h2>My body serves me well</h2></div>
   <div class="body">
     <p>I run 5 km without stopping now, and I credit the trainers at MINT for the strong body that came with it. I also just like walking.</p>
     <p>My one fitness rule is no rules. Nothing like "move five times a week". I trust my body to tell me when it is time, and I am disciplined enough to listen.</p>
@@ -269,7 +288,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </div></section>
 
 <section id="notes"><div class="wrap grid">
-  <div class="side"><p class="label">08 Notes</p><h2>For job seekers</h2><p class="s">A few years of hiring, and a lot of CVs.</p></div>
+  <div class="side"><p class="label">09 Notes</p><h2>For job seekers</h2><p class="s">A few years of hiring, and a lot of CVs.</p></div>
   <div class="body">
     <ol class="rules">
       <li><div><h3>Do not vibe apply</h3><p>Skip roles that are not a good fit for you. Your time is better spent on fewer, better applications.</p></div></li>
@@ -285,7 +304,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </div></section>
 
 <section id="connect"><div class="wrap grid">
-  <div class="side"><p class="label">09 Connect</p><h2>Say hi</h2><p class="s">Writing, short videos, and the professional side.</p></div>
+  <div class="side"><p class="label">10 Connect</p><h2>Say hi</h2><p class="s">Writing, short videos, and the professional side.</p></div>
   <div class="body">
     <div class="connect">
       <a class="c" href="https://goldamasibo.substack.com" target="_blank" rel="noopener"><span class="k">Substack</span><span class="v">My writing</span><span class="d">Read what I am thinking about, in long form.</span></a>
