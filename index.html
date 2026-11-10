@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Golda Masibo</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat:wght@500;700&family=Outfit:wght@300..700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --bg:#FFF3D6;--surface:#FFFBF0;--ink:#1B1B3A;--muted:#5B5A78;--line:#1B1B3A;
+  --coral:#F2542D;--teal:#0E9594;--pink:#F7C3D3;--sun:#FFC83D;--coral-ink:#FFFFFF;
+  --font-display:"Bagel Fat One","Arial Rounded MT Bold",Arial,sans-serif;
+  --font-body:"Outfit","Helvetica Neue",Arial,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,Menlo,monospace;
+  --font-hand:"Caveat","Bradley Hand",cursive;
+  --shadow:4px 4px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#14142B;--surface:#1E1E3F;--ink:#FFF1D6;--muted:#B9B7D6;--line:#FFF1D6;
+    --coral:#FF7A59;--teal:#4FD1C5;--pink:#5A2A45;--sun:#FFD25E;--coral-ink:#1B1B3A;color-scheme:dark}
+}
+:root[data-theme="dark"]{
+  --bg:#14142B;--surface:#1E1E3F;--ink:#FFF1D6;--muted:#B9B7D6;--line:#FFF1D6;
+  --coral:#FF7A59;--teal:#4FD1C5;--pink:#5A2A45;--sun:#FFD25E;--coral-ink:#1B1B3A;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:2px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.logo{font-family:var(--font-display);font-size:1.4rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.logo span{color:var(--coral)}
+nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{font-family:var(--font-mono);font-size:.78rem;color:var(--ink);text-decoration:none;padding:5px 11px;border:2px solid transparent;border-radius:99px;white-space:nowrap}
+nav a:hover{border-color:var(--line);background:var(--sun);color:#1B1B3A}
+.hero{padding-block:64px 56px;position:relative}
+.eyebrow{font-family:var(--font-hand);font-size:1.7rem;font-weight:700;color:var(--coral);margin:0 0 6px;transform:rotate(-2deg);display:inline-block}
+h1{font-family:var(--font-display);font-weight:400;font-size:clamp(2.7rem,9vw,5.6rem);line-height:1;margin:0 0 24px;text-wrap:balance;max-width:13ch}
+h1 mark{background:var(--sun);color:#1B1B3A;padding:0 .14em;border-radius:.16em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.lead{font-size:clamp(1.15rem,2.4vw,1.4rem);max-width:34em;margin:0 0 26px;text-wrap:pretty}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 36px;padding:0;list-style:none}
+.chips li{font-family:var(--font-mono);font-size:.78rem;border:2px solid var(--line);background:var(--surface);padding:5px 13px;border-radius:99px}
+.chips li:nth-child(1){background:var(--pink);color:var(--ink)}
+.chips li:nth-child(3){background:var(--sun);color:#1B1B3A}
+.chips li:nth-child(4){background:var(--teal);color:#fff}
+:root[data-theme="dark"] .chips li:nth-child(4){color:#14142B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .chips li:nth-child(4){color:#14142B}}
+.lately{background:var(--teal);color:#fff;border:2px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:22px 24px;max-width:540px;transform:rotate(-1deg)}
+:root[data-theme="dark"] .lately{color:#14142B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .lately{color:#14142B}}
+.lately h3{font-family:var(--font-hand);font-size:1.9rem;line-height:1;margin:0 0 8px}
+.lately ul{margin:0;padding-left:1.1em}
+.lately li{margin:3px 0}
+section{padding-block:60px;border-top:2px solid var(--line)}
+.grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.3fr);gap:28px 56px}
+@media(max-width:760px){.grid{grid-template-columns:minmax(0,1fr)}.hero{padding-block:44px 36px}}
+h2{font-family:var(--font-display);font-weight:400;font-size:2.3rem;line-height:1.05;margin:0}
+.kicker{font-family:var(--font-hand);font-size:1.6rem;font-weight:700;color:var(--coral);margin:0 0 2px;line-height:1}
+.side p.s{color:var(--muted);font-size:.98rem;margin:12px 0 0;max-width:20em}
+.body p{margin:0 0 1em;max-width:38em}
+.body p:last-child{margin-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:18px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:22px;min-width:0}
+.card:nth-child(2){background:var(--pink)}
+.card:nth-child(3){background:var(--sun);color:#1B1B3A}
+.card h3{font-family:var(--font-display);font-weight:400;font-size:1.3rem;line-height:1.15;margin:0 0 8px}
+.card p{margin:0;font-size:.98rem}
+.card:nth-child(2){color:var(--ink)}
+.tag{display:inline-block;font-family:var(--font-mono);font-size:.7rem;border:2px solid currentColor;padding:2px 9px;border-radius:99px;margin-bottom:12px}
+.timeline{list-style:none;margin:0;padding:0}
+.timeline li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:2px dashed var(--line)}
+.timeline li:first-child{padding-top:0}
+.timeline .when{font-family:var(--font-mono);font-size:.8rem;padding-top:5px}
+.timeline h3{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.25rem}
+.timeline p{margin:4px 0 0;color:var(--muted);font-size:.98rem}
+@media(max-width:520px){.timeline li{grid-template-columns:minmax(0,1fr);gap:2px}}
+.sub-h{font-family:var(--font-display);font-weight:400;font-size:1.4rem;margin:30px 0 14px}
+.small{color:var(--muted);font-size:.92rem}
+/* education */
+.edu{display:grid;gap:18px}
+.deg{display:grid;grid-template-columns:76px minmax(0,1fr);gap:18px;background:var(--surface);border:2px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:20px}
+.deg:nth-child(2){background:var(--sun);color:#1B1B3A}
+.deg:nth-child(3){background:var(--pink)}
+.crest{width:76px;height:76px;border:2px solid var(--line);border-radius:18px;background:var(--bg);display:grid;place-items:center;font-family:var(--font-display);font-size:1.5rem;color:var(--ink);text-align:center;line-height:1;overflow:hidden}
+.crest img{width:100%;height:100%;object-fit:contain;padding:8px}
+.deg:nth-child(2) .crest{color:#1B1B3A;background:#FFFBF0}
+.deg .meta{font-family:var(--font-mono);font-size:.76rem;margin:0 0 4px}
+.deg h3{margin:0 0 6px;font-family:var(--font-display);font-weight:400;font-size:1.3rem;line-height:1.15}
+.deg p{margin:0 0 .6em;font-size:.98rem}
+.deg p:last-child{margin:0}
+.deg .pill{display:inline-block;font-family:var(--font-mono);font-size:.7rem;border:2px solid currentColor;border-radius:99px;padding:1px 9px;margin-bottom:8px}
+@media(max-width:520px){.deg{grid-template-columns:minmax(0,1fr)}}
+.goals{margin-top:22px;border:2px dashed var(--line);border-radius:20px;padding:18px 22px}
+.goals h3{font-family:var(--font-hand);font-size:1.8rem;line-height:1;margin:0 0 6px;color:var(--coral)}
+.goals p{margin:0}
+/* research */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:0 0 26px}
+.stat{background:var(--surface);border:2px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:16px 18px}
+.stat:nth-child(2){background:var(--coral);color:var(--coral-ink)}
+.stat b{display:block;font-family:var(--font-display);font-weight:400;font-size:2.4rem;line-height:1}
+.stat span{font-size:.88rem}
+.chart{background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:22px}
+.chart h3{margin:0 0 2px;font-family:var(--font-display);font-weight:400;font-size:1.25rem}
+.chart .sub{margin:0 0 16px;font-size:.85rem;color:var(--muted)}
+.row{display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr) 44px;align-items:center;gap:12px;margin:9px 0;font-size:.92rem}
+.row .bar{height:14px;background:var(--bg);border:2px solid var(--line);border-radius:0 8px 8px 0;position:relative}
+.row .bar i{position:absolute;left:-2px;top:-2px;bottom:-2px;background:var(--coral);border:2px solid var(--line);border-radius:0 8px 8px 0}
+.row:nth-child(n+5) .bar i{background:var(--teal)}
+.row b{font-family:var(--font-mono);font-weight:700;font-size:.82rem;text-align:right}
+@media(max-width:480px){.row{grid-template-columns:minmax(0,100px) minmax(0,1fr) 40px;font-size:.82rem}}
+/* books */
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.book{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:18px;min-width:0}
+.cover{aspect-ratio:2/3;border:2px solid var(--line);border-radius:6px 12px 12px 6px;box-shadow:3px 3px 0 var(--ink);overflow:hidden;display:grid;place-items:center;text-align:center;padding:10px;font-family:var(--font-display);line-height:1.1;font-size:.95rem;position:relative}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover.c1{background:var(--teal);color:#fff}
+.cover.c2{background:var(--pink);color:var(--ink)}
+.cover.c3{background:var(--sun);color:#1B1B3A}
+.book h3{margin:0;font-family:var(--font-display);font-weight:400;font-size:1.25rem;line-height:1.15}
+.book .by{font-family:var(--font-mono);font-size:.74rem;color:var(--muted);margin:2px 0 8px}
+.book p{margin:0 0 .6em;font-size:.96rem}
+.verdict{font-family:var(--font-hand);font-size:1.5rem;font-weight:700;color:var(--coral);line-height:1}
+.next{grid-column:1/-1}
+@media(max-width:420px){.book{grid-template-columns:minmax(0,1fr)}.cover{max-width:140px}}
+/* move */
+.track{background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:16px 22px;margin-top:22px}
+.track svg{width:100%;height:auto;display:block}
+.track p{margin:6px 0 0;font-family:var(--font-hand);font-size:1.4rem;color:var(--muted);line-height:1.1}
+/* notes */
+.rules{counter-reset:r;list-style:none;margin:0;padding:0;display:grid;gap:16px}
+.rules li{counter-increment:r;display:grid;grid-template-columns:54px minmax(0,1fr);gap:14px;background:var(--surface);border:2px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:20px}
+.rules li:nth-child(2){background:var(--sun);color:#1B1B3A}
+.rules li:nth-child(3){background:var(--pink)}
+.rules li::before{content:counter(r);font-family:var(--font-display);font-size:2.6rem;line-height:1;color:var(--coral)}
+.rules li:nth-child(2)::before{color:#1B1B3A}
+.rules h3{margin:0 0 4px;font-family:var(--font-display);font-weight:400;font-size:1.25rem}
+.rules p{margin:0;font-size:.98rem}
+.coming{margin-top:26px;border:2px dashed var(--line);border-radius:22px;padding:22px;background:var(--surface)}
+.coming .tagline{font-family:var(--font-hand);font-size:1.7rem;font-weight:700;color:var(--coral);line-height:1;margin:0 0 6px}
+.coming h3{margin:0 0 8px;font-family:var(--font-display);font-weight:400;font-size:1.4rem;line-height:1.15}
+.coming p{margin:0;max-width:38em}
+footer{border-top:2px solid var(--line);padding-block:36px 56px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer b{font-family:var(--font-display);font-weight:400}
+</style>
+
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">hey<span>golda</span></a>
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#school">School</a><a href="#work">Work</a><a href="#builds">Builds</a><a href="#research">Research</a><a href="#shelf">Shelf</a><a href="#move">Move</a><a href="#notes">Notes</a>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <p class="eyebrow">hey, I'm Golda</p>
+    <h1>A <mark>People and Culture</mark> professional at heart.</h1>
+    <p class="lead">I make hiring and work feel fairer, clearer and a bit kinder, then I write the script so nobody has to do it by hand again.</p>
+    <ul class="chips">
+      <li>Talent acquisition</li><li>Employer brand</li><li>People operations</li><li>Automation</li><li>People analytics</li>
+    </ul>
+    <div class="lately">
+      <h3>lately</h3>
+      <ul>
+        <li>Building Kora, a small tool for people teams</li>
+        <li>Learning German, still very much a beginner</li>
+        <li>Reading, walking, and chasing a longer run</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section id="about"><div class="wrap grid">
+  <div class="side"><p class="kicker">01</p><h2>About</h2><p class="s">The short version, in my own voice.</p></div>
+  <div class="body">
+    <p>I work in talent acquisition at a pan-African university, where I look after hiring from the first brief to the first day. I like the whole journey: the job ad, the screen, the interview, the offer, and the part nobody thinks about, which is how it all felt for the person on the other side.</p>
+    <p>I am happiest when a messy process turns into a clear one. If I catch myself doing the same thing for the third time, I start writing a script. Forms, calendars, trackers and handover emails have all lost their manual parts that way.</p>
+    <p>Outside work I read, walk, lift, and nag my friends to move to my side of town so we can do all three together. I also help with a small online accessories and footwear business that belongs to my sister.</p>
+  </div>
+</div></section>
+
+<section id="school"><div class="wrap grid">
+  <div class="side"><p class="kicker">02</p><h2>School</h2><p class="s">Three degrees, one very winding road.</p></div>
+  <div class="body">
+    <div class="edu">
+      <div class="deg">
+        <div class="crest" aria-hidden="true">KU</div>
+        <div>
+          <p class="meta">BA · completed</p>
+          <h3>Counselling Psychology</h3>
+          <p>Honestly, I did not do well in the field. My mind loves a good challenge, and the version of psychology I studied was mostly sitting at a desk and listening to clients. Not for me. I took a break in third year to try something else.</p>
+        </div>
+      </div>
+      <div class="deg">
+        <div class="crest" aria-hidden="true">ALU</div>
+        <div>
+          <p class="meta">International Business and Trade</p>
+          <h3>African Leadership University</h3>
+          <p>I loved how practical it was. This is where my love for data began. ALU taught me how to think critically, and it showed: I went back to KU after the Covid break and my final year was a huge success.</p>
+        </div>
+      </div>
+      <div class="deg">
+        <div class="crest" aria-hidden="true">UoL</div>
+        <div>
+          <span class="pill">on a break</span>
+          <p class="meta">MSc · University of Liverpool</p>
+          <h3>Data Science and AI</h3>
+          <p>I started last year and have paused, because it began to feel like the traditional education I had escaped. ALU set a standard for learning, and I will probably return to a masters once I find an institution that works for my brain the way ALU did.</p>
+        </div>
+      </div>
+    </div>
+    <div class="goals">
+      <h3>next up</h3>
+      <p>Read more. My next book, hopefully, is Thinking in Systems.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap grid">
+  <div class="side"><p class="kicker">03</p><h2>Work</h2><p class="s">Where the days go.</p></div>
+  <div class="body">
+    <ul class="timeline">
+      <li><span class="when">Now</span><div><h3>Talent Acquisition Associate</h3><p>Full-cycle hiring, employer brand and people analytics at a pan-African university. Interns, graduate programmes and staff roles, end to end.</p></div></li>
+      <li><span class="when">Alongside</span><div><h3>Employer brand</h3><p>Helped shape how the institution shows up to candidates, from review sites to ambassador stories, and took part in the Top Employers Institute assessment and defence.</p></div></li>
+      <li><span class="when">Before</span><div><h3>Operations and communications</h3><p>Support roles in the office of a CEO at a conservation organisation, and communications work on workplace tools. This is where I learned how much a calm, well-run office matters.</p></div></li>
+    </ul>
+    <h3 class="sub-h">What I bring</h3>
+    <div class="cards">
+      <div class="card"><span class="tag">Hiring</span><h3>Fair by design</h3><p>Structured screens, clear scorecards, and candidates who always know what happens next.</p></div>
+      <div class="card"><span class="tag">Data</span><h3>Numbers that move decisions</h3><p>Pipeline tracking, funnel reviews and quarterly stories leaders can act on.</p></div>
+      <div class="card"><span class="tag">Brand</span><h3>An honest employer story</h3><p>What the place is really like, told in a way that attracts the right people.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="builds"><div class="wrap grid">
+  <div class="side"><p class="kicker">04</p><h2>Builds</h2><p class="s">Things I automated because I got tired of doing them by hand.</p></div>
+  <div class="body">
+    <div class="cards">
+      <div class="card"><span class="tag">Automation</span><h3>Candidate journey</h3><p>Apps Script, Forms and Calendar working together: scheduling that books itself, and timed assignments that reach candidates and come back on schedule.</p></div>
+      <div class="card"><span class="tag">Product</span><h3>Kora</h3><p>A people-team tool, currently a Sheets MVP with Python on the way. Small on purpose, useful first.</p></div>
+      <div class="card"><span class="tag">Reporting</span><h3>Quarterly review decks</h3><p>Pipeline data turned into a story: where candidates come from, where they drop, and what to fix next.</p></div>
+    </div>
+    <p class="small" style="margin-top:22px">Tools I reach for: Greenhouse, BambooHR, Google Workspace, Apps Script, Excel, Python, Claude.</p>
+  </div>
+</div></section>
+
+<section id="research"><div class="wrap grid">
+  <div class="side"><p class="kicker">05</p><h2>Research</h2><p class="s">My undergraduate capstone, on what young professionals want from a workplace.</p></div>
+  <div class="body">
+    <div class="stats">
+      <div class="stat"><b>37</b><span>respondents</span></div>
+      <div class="stat"><b>70.3%</b><span>called their values non-negotiable</span></div>
+      <div class="stat"><b>59.5%</b><span>had left an organisation over values</span></div>
+    </div>
+    <div class="chart" role="img" aria-label="Bar chart of values scores: Fairness 89.2, Teamwork 83.8, Integrity 81.1, then four values at 73">
+      <h3>What mattered most</h3>
+      <p class="sub">Share of respondents rating each value as important, %</p>
+      <div class="row"><span>Fairness</span><div class="bar"><i style="width:89.2%"></i></div><b>89.2</b></div>
+      <div class="row"><span>Teamwork</span><div class="bar"><i style="width:83.8%"></i></div><b>83.8</b></div>
+      <div class="row"><span>Integrity</span><div class="bar"><i style="width:81.1%"></i></div><b>81.1</b></div>
+      <div class="row"><span>Honesty</span><div class="bar"><i style="width:73%"></i></div><b>73</b></div>
+      <div class="row"><span>Accountability</span><div class="bar"><i style="width:73%"></i></div><b>73</b></div>
+      <div class="row"><span>Customer satisfaction</span><div class="bar"><i style="width:73%"></i></div><b>73</b></div>
+      <div class="row"><span>Diversity and inclusion</span><div class="bar"><i style="width:73%"></i></div><b>73</b></div>
+    </div>
+    <p style="margin-top:20px">Fairness came first by a clear margin. It is the same thread that runs through how I hire.</p>
+  </div>
+</div></section>
+
+<section id="shelf"><div class="wrap grid">
+  <div class="side"><p class="kicker">06</p><h2>Shelf</h2><p class="s">Books from this year, with my honest opinions.</p></div>
+  <div class="body">
+    <div class="books">
+      <div class="book">
+        <div class="cover c1"><span>Tomorrow Died Yesterday</span></div>
+        <div>
+          <h3>Tomorrow Died Yesterday</h3>
+          <p class="by">Chimeka Garricks</p>
+          <p>I loved it. The Asiama chapter, where soldiers go on a revenge mission, undid me. I read it at a sports club, holding back tears, wondering how Amaibi still found a way to acknowledge God after all that happened. I only wish it had been edited more: stray errors pulled me out of writing that is genuinely brilliant.</p>
+          <span class="verdict">loved it</span>
+        </div>
+      </div>
+      <div class="book">
+        <div class="cover c2"><span>Daring Greatly</span></div>
+        <div>
+          <h3>Daring Greatly</h3>
+          <p class="by">Brené Brown</p>
+          <p>Not for me. I do not like a book that arrives already labelled as personal development. I would rather read, think, and pull my own lessons out of it. That is where the critical thinking happens.</p>
+          <span class="verdict">mixed</span>
+        </div>
+      </div>
+      <div class="book next">
+        <div class="cover c3"><span>Thinking in Systems</span></div>
+        <div>
+          <h3>Thinking in Systems</h3>
+          <p class="by">Donella Meadows</p>
+          <p>Up next, hopefully. I will report back.</p>
+          <span class="verdict">on deck</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="move"><div class="wrap grid">
+  <div class="side"><p class="kicker">07</p><h2>Move</h2><p class="s">My body serves me well, so I return the favour.</p></div>
+  <div class="body">
+    <p>I now run 5 km without stopping, and I credit the trainers at MINT for the strong, toned body that came with it. I also just like walking.</p>
+    <p>My one fitness rule: no rules. Nothing like "move five times a week". I trust my body to tell me when it is time, and I am disciplined enough to listen.</p>
+    <p>I truly believe everything is more possible with community, so if you live near me and want a walking or running buddy, say hi.</p>
+    <div class="track">
+      <svg viewBox="0 0 400 120" role="img" aria-label="A running track loop marked 5 kilometres">
+        <rect x="40" y="20" width="320" height="80" rx="40" fill="var(--bg)" stroke="var(--ink)" stroke-width="3"/>
+        <rect x="64" y="40" width="272" height="40" rx="20" fill="none" stroke="var(--coral)" stroke-width="3" stroke-dasharray="3 9" stroke-linecap="round"/>
+        <circle cx="40" cy="60" r="9" fill="var(--sun)" stroke="var(--ink)" stroke-width="3"/>
+        <text x="200" y="66" text-anchor="middle" font-family="Space Mono, monospace" font-size="15" font-weight="700" fill="var(--ink)">5 km · non-stop</text>
+      </svg>
+      <p>no streaks, no targets, just showing up when it feels right</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="notes"><div class="wrap grid">
+  <div class="side"><p class="kicker">08</p><h2>Notes</h2><p class="s">What a few years of hiring and tens of thousands of CVs taught me.</p></div>
+  <div class="body">
+    <ol class="rules">
+      <li><div><h3>Do not vibe apply</h3><p>Skip roles that are not a good fit. Your time is better spent on fewer, better applications.</p></div></li>
+      <li><div><h3>One role per company, not ten</h3><p>You may love what they love, but applying for a finance internship and a VP of People and Culture in the same week is a red flag.</p></div></li>
+      <li><div><h3>People are biased, so make it work for you</h3><p>A clean, readable CV, preferably a PDF. Show up to interviews looking like you like yourself: good internet if virtual, a put-together look, clear speech. And for goodness' sake, be brief.</p></div></li>
+    </ol>
+    <div class="coming">
+      <p class="tagline">coming soon</p>
+      <h3>Faith, agency, and what I am unlearning</h3>
+      <p>I am a Pentecostal Christian, and I am writing about how organised religion has partly slowed my personal and professional progress by taking agency away from us. I am unlearning that, and still holding on to God, because believing in a higher being protects my sanity.</p>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span><b>Golda Masibo</b> · People and Culture, at heart</span>
+  <span>Built with Claude, in Nairobi.</span>
+</div></footer>
+
+</html>
