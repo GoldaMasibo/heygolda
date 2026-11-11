@@ -122,15 +122,14 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .p6{background:linear-gradient(135deg,#6B2E8C,#2A1650)}.place.wide{grid-column:1/-1}.place.wide p{margin-bottom:.8em;max-width:38em}.place.wide .ph{aspect-ratio:16/5;max-height:110px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:0 0 34px}.stats div{background:var(--paper);padding:16px 14px}.stats{--x:0}@media(max-width:560px){.stats{grid-template-columns:repeat(2,1fr)}}
 .stats b{display:block;font-family:var(--serif);font-weight:400;font-size:1.9rem;line-height:1.1;color:var(--accent)}.stats span{display:block;margin-top:6px;font-size:.82rem;line-height:1.35;color:var(--muted)}
-.track .gym{font-family:var(--mono);font-size:.8rem;letter-spacing:.04em;color:var(--muted);margin:8px 0 0}.track .gym b{font-family:var(--serif);font-weight:400;font-size:1.6rem;color:var(--accent);letter-spacing:0;margin-right:6px}
 .role{font-family:var(--mono);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:-14px 0 24px}
-.pts{list-style:none;margin:0;padding:0;display:grid;gap:10px;max-width:40em}.pts li{background:var(--accent-soft);border-left:3px solid var(--accent);padding:12px 16px;font-size:1rem;line-height:1.5}.pts li em{font-style:normal;color:var(--accent);font-weight:600}
+.pts{list-style:none;margin:0;padding:0;display:grid;gap:16px;max-width:40em}.pts li{position:relative;padding-left:26px;font-size:1.05rem;line-height:1.55}.pts li::before{content:"";position:absolute;left:3px;top:.55em;width:9px;height:9px;background:var(--accent);transform:rotate(45deg)}.pts li em{font-style:normal;color:var(--accent);font-weight:600}
 .tools{font-family:var(--mono);font-size:.74rem;letter-spacing:.04em;color:var(--muted);margin:10px 0 0}
 .place .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:12px 0 4px}
 .place h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15;margin:0 0 6px}
 .place p{margin:0;color:var(--muted);font-size:1rem}
 /* move */
-.track{margin-top:26px;border-top:1px solid var(--rule);padding-top:20px}
+.track{margin-top:22px}
 .track svg{width:100%;max-width:420px;height:auto;display:block}
 .track p{margin:6px 0 0;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 /* notes */
@@ -284,17 +283,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </div></section>
 
 <section id="move"><div class="wrap grid">
-  <div class="side"><p class="label">08 Move</p><h2>My body serves me well</h2></div>
+  <div class="side"><p class="label">08 Move</p><h2>My body serves me well</h2><div class="track"><svg viewBox="0 0 420 140" role="img" aria-label="A running track loop marked 5 kilometres non-stop, with 125 plus gym sessions since October 2025">
+        <rect x="6" y="6" width="408" height="128" rx="64" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect x="28" y="28" width="364" height="84" rx="42" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
+        <circle cx="62" cy="70" r="7" fill="var(--accent)"/>
+        <text x="215" y="68" text-anchor="middle" font-family="DM Mono, monospace" font-size="17" fill="var(--ink)">5 km, non-stop</text>
+        <text x="215" y="96" text-anchor="middle" font-family="DM Mono, monospace" font-size="13" fill="var(--accent)">125+ gym sessions since Oct 2025</text>
+      </svg></div></div>
   <div class="body">
-    <div class="track">
-      <svg viewBox="0 0 420 110" role="img" aria-label="A running track loop marked 5 kilometres">
-        <rect x="6" y="6" width="408" height="98" rx="49" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
-        <rect x="26" y="26" width="368" height="58" rx="29" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="2 8" stroke-linecap="round"/>
-        <circle cx="55" cy="55" r="7" fill="var(--accent)"/>
-        <text x="210" y="60" text-anchor="middle" font-family="DM Mono, monospace" font-size="15" fill="var(--ink)">5 km, non-stop</text>
-      </svg>
-      <p class="gym"><b>125+</b> gym sessions since October 2025</p>
-    </div>
+
     <p>I run 5 km without stopping now, and I credit the trainers at <a href="https://www.instagram.com/mint.kenya" target="_blank" rel="noopener">MINT</a> for the strong body that came with it. I also just like walking.</p>
     <p>My one fitness rule is no rules. Nothing like "move five times a week". I trust my body to tell me when it is time, and I am disciplined enough to listen.</p>
     <p>I truly believe everything is more possible with community, so if you live near me and want a walking or running buddy, say hi.</p>
