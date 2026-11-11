@@ -10,18 +10,10 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Gloock&family=Hanken+Grotesk:ital,wght@0,300..700;1,300..600&display=swap">
 <style>
 :root{
-  --paper:#FFFFFF;--paper2:#F3F3F4;--ink:#18161A;--muted:#66636B;--rule:#DEDDE1;
-  --accent:#8C1D40;--accent-soft:#F6E1E7;--leaf:#2E6B4F;--grid:rgba(24,22,26,.06);
-  --serif:"Gloock","Georgia",serif;--sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;
+  --paper:#F5F5F3;--paper2:#EAEAE7;--ink:#18161A;--muted:#66636B;--rule:#D9D8D6;
+  --accent:#8C1D40;--accent-soft:#F6E1E7;--leaf:#2E6B4F;--grid:rgba(24,22,26,.075);
+  color-scheme:light;--serif:"Gloock","Georgia",serif;--sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;--mono:"DM Mono",ui-monospace,Menlo,monospace;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    --paper:#121113;--paper2:#1C1A1E;--ink:#F3F0F4;--muted:#A9A5AE;--rule:#34313A;
-    --accent:#F08AA8;--accent-soft:#3A1F29;--leaf:#8CC9A8;--grid:rgba(243,240,244,.06);color-scheme:dark}
-}
-:root[data-theme="dark"]{
-  --paper:#121113;--paper2:#1C1A1E;--ink:#F3F0F4;--muted:#A9A5AE;--rule:#34313A;
-  --accent:#F08AA8;--accent-soft:#3A1F29;--leaf:#8CC9A8;--grid:rgba(243,240,244,.06);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;
@@ -141,7 +133,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .coming{margin-top:36px;background:var(--accent-soft);padding:26px;border-left:4px solid var(--accent)}
 .coming .label{margin-bottom:6px}
 .coming h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.2;margin:0 0 10px}
-.coming p{margin:0;max-width:36em;font-size:1rem}
+.coming p{margin:0 0 .8em;max-width:36em;font-size:1rem}.coming p:last-child{margin:0}
 /* connect */
 .connect{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
 .connect .c{padding:22px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);text-decoration:none;display:block;min-width:0}
@@ -170,7 +162,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <p class="quote">Human beings are naturally biased. Try to make their biases work for you.</p>
   <p class="by">Golda Masibo, on getting hired</p>
   <h1>Golda<br>Masibo<span class="dot">.</span></h1>
-  <p class="stand">I stand for work that is <em>fair</em>, <em>clear</em> and <em>kind</em>, and I build the systems that make it that way for the people on the other side of the hiring table.</p>
+  <p class="stand">I believe good work should be <em>fair</em>, <em>clear</em> and <em>kind</em>. I care about the people on the other side of the hiring table, and I build the processes that make those values tangible.</p>
   <ul class="links">
     <li><a href="https://www.linkedin.com/in/golda-masibo-680076156/" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
     <li><a href="https://goldamasibo.substack.com" target="_blank" rel="noopener">Substack &rarr;</a></li>
@@ -180,58 +172,64 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 </div>
 
 <section id="about"><div class="wrap grid">
-  <div class="side"><p class="label">01 About</p><h2>Hello.</h2></div>
+  <div class="side"><p class="label">01 Who I am</p><h2>Hello.</h2></div>
   <div class="body">
-    <p class="lede">I am a People and Culture professional at heart who happens to spend her days recruiting.</p>
-    <ul class="chips" style="margin:0 0 1.2em"><li>Adaptable</li><li>Good with people</li><li>Inventive</li></ul>
-    <p>I like the whole journey a person takes into a workplace: the job ad, the first conversation, the interview, the offer, and the part nobody talks about, which is how it all felt. I am happiest when a messy process turns into a clear one, and when I catch myself doing something by hand for the third time, I write a script.</p>
-    <p>Outside work I read, walk, lift, and nag my friends to move to my side of town so we can do all three together. My dream is a cool mobile coffee shop that I run with my sister, who is a qualified pastry chef. I am a sucker for a pretty coffee stand.</p>
+    <p class="lede">I'm a People and Culture professional at heart, who happens to spend most of her days recruiting.</p>
+    <ul class="chips" style="margin:0 0 1.2em"><li>Adaptable</li><li>People-oriented</li><li>Inventive</li></ul>
+    <p>I'm interested in the entire journey a person takes into an organisation, from the first job advert and initial conversation to the interview, the offer, and ultimately, how they feel about the experience.</p>
+    <p>I'm happiest when a messy process becomes a clear one. And when I catch myself doing something manually for the third time, I start looking for a way to automate it.</p>
+    <p>Outside work, I read, walk and lift weights. I also regularly try to convince my friends to move to my side of town so we can do all three together.</p>
+    <p>One day, I'd love to run a little mobile coffee shop with my sister, a qualified pastry chef. I'm a sucker for a pretty coffee stand, and I think the two of us could make something lovely.</p>
   </div>
 </div></section>
 
 <section id="proud"><div class="wrap grid">
-  <div class="side"><p class="label">02 Work</p><h2>What I do well</h2><p class="s">Processes I have automated, and people I have matched to the right seat.</p></div>
+  <div class="side"><p class="label">02 Work</p><h2>What I do well</h2><p class="s">Processes I've made better, and people I've helped find the right seat.</p></div>
   <div class="body">
     <ul class="proud">
-      <li><span class="n">1</span><div><h3>Referral programmes that people use</h3><p>I took a staff referral programme from an idea people liked to a simple process they could follow and I could track.</p></div></li>
-      <li><span class="n">2</span><div><h3>Calendars that book themselves</h3><p>Senior leaders now book their own calls, so nobody spends a week going back and forth over email.</p></div></li>
-      <li><span class="n">3</span><div><h3>Hires who stay</h3><p>Everyone I have hired so far has made it through probation and is still there. None have left yet.</p></div></li>
-      <li><span class="n">4</span><div><h3>Reading a culture before choosing a person</h3><p>I take the time to understand how a place really works, then look for the person who will thrive in it. That is how the hires stay.</p></div></li>
+      <li><span class="n">1</span><div><h3>Referral programmes people actually use</h3><p>I took a staff referral programme from an idea people liked to a structured process that employees could easily follow and I could track. The goal was to make participation simple and accountability possible.</p></div></li>
+      <li><span class="n">2</span><div><h3>Calendars that book themselves</h3><p>I built an automated scheduling process that allows senior leaders to book their own interviews, eliminating the endless email exchanges that used to come with finding a suitable time.</p></div></li>
+      <li><span class="n">3</span><div><h3>Hires who stay</h3><p>Every person I've hired so far has passed probation, and none have left yet. I'm proud of that. Getting someone through the door matters, but so does finding someone who wants to stay.</p></div></li>
+      <li><span class="n">4</span><div><h3>Understanding a culture before hiring into it</h3><p>I take time to understand how a team operates, what it values and what makes someone successful in that environment. I don't just look for someone who can do the job. I look for someone who can thrive in the context they'll be doing it in.</p></div></li>
     </ul>
   </div>
 </div></section>
 
 <section id="school"><div class="wrap grid">
-  <div class="side"><p class="label">03 School</p><h2>The long way round</h2><p class="s">Three degrees, one winding road.</p></div>
+  <div class="side"><p class="label">03 School</p><h2>The long way round</h2><p class="s">Three qualifications, one winding road.</p></div>
   <div class="body">
     <ul class="edu">
       <li><div class="crest" aria-label="Kenyatta University">KU<img src="logos/ku.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">BA &middot; Counselling Psychology</p><h3>Kenyatta University</h3>
-        <p>Counselling psychology was not the right fit for me. The version I studied kept me at a desk, listening to clients, and I wanted something that kept my mind busier. In my third year I stepped away, found business studies, and came back during the pandemic to finish the degree.</p></div></li>
+        <p>Counselling Psychology wasn't quite the fit I'd imagined. I enjoyed understanding people, but the way the discipline was taught didn't give me the intellectual variety I was looking for.</p>
+        <p>During my third year, I stepped away and explored business studies before eventually returning to complete my degree during the pandemic.</p></div></li>
       <li><div class="crest" aria-label="African Leadership University">ALU<img src="logos/alu.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">International Business and Trade</p><h3>African Leadership University</h3>
-        <p>Hands-on, practical learning, and where my interest in data started. It taught me to question things properly, which is why my last stretch at Kenyatta went so well.</p></div></li>
+        <p>ALU introduced me to a very different way of learning: practical, hands-on and grounded in solving real problems. It's also where my interest in data began.</p>
+        <p>It taught me to question things, connect ideas and think beyond the obvious. Looking back, it shaped much of how I approach work today.</p></div></li>
       <li><div class="crest" aria-label="University of Liverpool">UoL<img src="logos/uol.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">MSc &middot; Data Science and AI</p><h3>University of Liverpool</h3>
-        <p>I started last year and have taken a break, because it began to feel like the traditional education I had escaped. ALU set a standard for learning, and I will probably go back to a masters once I find an institution that works for my brain the way ALU did.</p></div></li>
+        <p>I started my master's in 2025 and have since taken a break.</p>
+        <p>I realised I was struggling with a learning environment that felt quite different from what I'd experienced at ALU. I want to return to postgraduate study, but I also want to find an institution and learning environment that work better for how I think and learn.</p></div></li>
     </ul>
-    <p style="margin-top:26px"><strong>Up next:</strong> reading more, starting with <em>Thinking in Systems</em>.</p>
+    <p style="margin-top:26px"><strong>Up next:</strong> more reading, starting with <em>Thinking in Systems</em>.</p>
   </div>
 </div></section>
 
 <section id="builds"><div class="wrap grid">
-  <div class="side"><p class="label">04 Builds</p><h2>Things I made</h2><p class="s">Because I got tired of doing them by hand.</p></div>
+  <div class="side"><p class="label">04 Builds</p><h2>Things I've made</h2><p class="s">Because I got tired of doing things by hand.</p></div>
   <div class="body">
     <div class="builds">
-      <div class="build"><span class="t">Automation</span><h3>Candidate journey</h3><p>Apps Script, Forms and Calendar working together: interviews that book themselves and assignments that send on schedule.</p></div>
-      <div class="build"><span class="t">Craft</span><h3>The application kit</h3><p>CVs, notes and outreach, drafted with Claude and edited by me until they sound like me.</p></div>
+      <div class="build"><span class="t">Automation</span><h3>The candidate journey</h3><p>Google Apps Script, Forms and Calendar working together to make parts of recruitment run themselves. Candidates book their own interviews, assignments are sent automatically, and fewer things get lost in the back-and-forth.</p></div>
+      <div class="build"><span class="t">Craft</span><h3>The application kit</h3><p>A collection of CVs, notes and outreach materials I've developed with Claude and refined until they sound like me. A little AI assistance, a lot of editing, and absolutely no tolerance for generic corporate language.</p></div>
     </div>
     <div class="kora">
-      <span class="t">An idea I am still chasing</span>
+      <span class="t">An idea I'm still chasing</span>
       <h3>Kora</h3>
-      <p>Hiring and people data lives in too many places. Kora is my idea for pulling it together and turning it into plain-language stories that a people team can act on.</p>
-      <p><strong>Where it stands:</strong> I have a working spreadsheet prototype, a plan to test it with a handful of HR managers, and a roadmap. What I am stuck on is the jump from planning to actually building it properly in Python.</p>
-      <p>The more time I spend in people and culture, the more the vision grows past simply centralising people's data. I am still working it out, and I hope nobody builds it before I do.</p>
+      <p>Recruitment and people data live in too many places. Kora is my idea for bringing that information together and turning it into clear, useful narratives that People teams can actually act on.</p>
+      <p><strong>Where it stands:</strong> I have a spreadsheet prototype, a plan to test the idea with a handful of HR managers and a roadmap for what comes next. The part I'm still working through is moving from a spreadsheet prototype to a properly built product in Python.</p>
+      <p>The more time I spend in People and Culture, the more I see Kora becoming something bigger than a tool for centralising HR data. I'm still figuring out what that looks like.</p>
+      <p>And, selfishly, I hope nobody builds it before I do.</p>
     </div>
   </div>
 </div></section>
@@ -322,8 +320,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
     </div>
     <div class="coming">
       <p class="label">Coming soon on Substack</p>
-      <h3>Faith, agency, and what I am unlearning</h3>
-      <p>I am a Pentecostal Christian, and I am writing about how organised religion has partly slowed my personal and professional progress by taking agency away from us. I am unlearning that, and still holding on to God, because believing in a higher being protects my sanity.</p>
+      <h3>Faith, agency and what I'm unlearning</h3>
+      <p>I'm a Pentecostal Christian. My faith matters to me, but I've also been thinking about the ways organised religion can sometimes discourage personal agency, particularly when we're taught to surrender decisions, ambitions and responsibilities that are ours to carry.</p>
+      <p>I'm exploring what it means to take ownership of my life without losing my relationship with God. I don't want to abandon my faith. I want to examine the things I've been taught, question the ones that no longer serve me and hold on to what remains meaningful. Believing in something higher also protects my sanity.</p>
+      <p>I still believe in God. I just don't think belief and personal agency have to compete.</p>
     </div>
   </div>
 </div></section>
