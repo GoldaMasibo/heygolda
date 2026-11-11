@@ -29,13 +29,15 @@ nav{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none}
 nav::-webkit-scrollbar{display:none}
 nav a{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted);white-space:nowrap}
 nav a:hover{color:var(--accent)}
-.hero{padding-block:clamp(56px,10vw,120px) clamp(48px,8vw,90px);position:relative}
-.quote{font-family:var(--serif);font-size:clamp(1.35rem,3.2vw,2rem);line-height:1.25;max-width:22em;margin:0 0 8px;text-wrap:balance}
+.hero{padding-block:clamp(72px,12vw,150px) clamp(56px,9vw,110px);position:relative}
+.quote{font-family:var(--serif);font-size:clamp(1.35rem,3vw,1.9rem);line-height:1.25;max-width:22em;margin:0 0 8px;text-wrap:balance}
 .quote::before{content:"\201C";color:var(--accent);margin-right:2px}
 .quote::after{content:"\201D";color:var(--accent);margin-left:2px}
-.by{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 clamp(36px,6vw,64px)}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.6rem,15vw,10rem);line-height:.9;letter-spacing:-.03em;margin:0 0 28px}
+.by{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 clamp(24px,4vw,36px)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);line-height:1;letter-spacing:-.02em;margin:0 0 20px}
 h1 .dot{color:var(--accent)}
+.tag{font-size:clamp(1.1rem,2.2vw,1.4rem);line-height:1.4;max-width:30em;margin:0 0 26px}.tag em{font-style:normal;color:var(--accent);font-weight:600}
+.belief{font-size:1.2rem;line-height:1.5;max-width:30em;margin:0 0 1.2em}.belief em{font-style:normal;color:var(--accent);font-weight:600}
 .stand{font-size:clamp(1.15rem,2.4vw,1.5rem);line-height:1.4;max-width:30em;margin:0 0 28px}
 .stand em{font-style:normal;color:var(--accent);font-weight:600}
 .links{display:flex;flex-wrap:wrap;gap:10px 26px;margin:0 0 30px;padding:0;list-style:none}
@@ -51,6 +53,7 @@ h1 .dot{color:var(--accent)}
 section{border-top:1px solid var(--ink);padding-block:clamp(44px,7vw,80px)}
 .grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.5fr);gap:28px clamp(32px,6vw,90px)}
 @media(max-width:780px){.grid{grid-template-columns:minmax(0,1fr)}}
+.h2s{font-size:clamp(1.5rem,2.6vw,2rem);line-height:1.15}
 .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
 h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);line-height:1;margin:0;letter-spacing:-.01em}
 .side p.s{color:var(--muted);font-size:.98rem;margin:14px 0 0;max-width:19em}
@@ -116,6 +119,7 @@ h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.4vw,3rem);lin
 .place .ph{aspect-ratio:4/3;position:relative;overflow:hidden;display:grid;place-items:end start;padding:14px;font-family:var(--serif);font-size:1.5rem;color:#fff}
 .place .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .p1{background:linear-gradient(135deg,#2E6B4F,#12303A)}.p2{background:linear-gradient(135deg,#8C1D40,#3A1020)}.p3{background:linear-gradient(135deg,#C9822B,#6B2E1A)}.p4{background:linear-gradient(135deg,#1F5F8B,#13294B)}.p5{background:linear-gradient(135deg,#2A8C8C,#0F3C4A)}
+.p6{background:linear-gradient(135deg,#6B2E8C,#2A1650)}.place.wide{grid-column:1/-1}.place.wide p{margin-bottom:.8em;max-width:38em}.place.wide .ph{aspect-ratio:16/7}
 .place .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:12px 0 4px}
 .place h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;line-height:1.15;margin:0 0 6px}
 .place p{margin:0;color:var(--muted);font-size:1rem}
@@ -159,23 +163,23 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <div class="wrap hero">
   <svg class="shape s1" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L38 20 L20 38 L2 20 Z" fill="currentColor"/></svg>
   <svg class="shape s2" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="none" stroke="currentColor" stroke-width="3"/></svg>
-  <p class="quote">Human beings are naturally biased. Try to make their biases work for you.</p>
-  <p class="by">Golda Masibo, on getting hired</p>
-  <h1>Golda<br>Masibo<span class="dot">.</span></h1>
-  <p class="stand">I believe good work should be <em>fair</em>, <em>clear</em> and <em>kind</em>. I care about the people on the other side of the hiring table, and I build the processes that make those values tangible.</p>
+  <h1>Golda Masibo<span class="dot">.</span></h1>
+  <p class="tag">A <em>reader</em>, a <em>systems thinker</em> and a <em>People and Culture</em> professional, still working it all out.</p>
   <ul class="links">
     <li><a href="https://www.linkedin.com/in/golda-masibo-680076156/" target="_blank" rel="noopener">LinkedIn &rarr;</a></li>
     <li><a href="https://goldamasibo.substack.com" target="_blank" rel="noopener">Substack &rarr;</a></li>
     <li><span class="soon">TikTok, soon</span></li>
   </ul>
-  <ul class="chips"><li>People and Culture, at heart</li><li>Talent acquisition</li><li>Automation</li><li>Learning German</li></ul>
 </div>
 
 <section id="about"><div class="wrap grid">
-  <div class="side"><p class="label">01 Who I am</p><h2>Hello.</h2></div>
+  <div class="side"><p class="label">01 Who I am</p><h2 class="h2s">A reader, a critical thinker, a People and Culture professional.</h2></div>
   <div class="body">
+    <p class="quote">Human beings are naturally biased. Try to make their biases work for you.</p>
+    <p class="by">Golda Masibo, on getting hired</p>
+    <p class="belief">I believe good work should be <em>fair</em>, <em>clear</em> and <em>kind</em>. I care about the people on the other side of the hiring table, and I build the processes that make those values tangible.</p>
     <p class="lede">I'm a People and Culture professional at heart, who happens to spend most of her days recruiting.</p>
-    <ul class="chips" style="margin:0 0 1.2em"><li>Adaptable</li><li>People-oriented</li><li>Inventive</li></ul>
+    <ul class="chips" style="margin:0 0 1.4em"><li>People and Culture, at heart</li><li>Talent acquisition</li><li>Automation</li><li>Learning German</li></ul>
     <p>I'm interested in the entire journey a person takes into an organisation, from the first job advert and initial conversation to the interview, the offer, and ultimately, how they feel about the experience.</p>
     <p>I'm happiest when a messy process becomes a clear one. And when I catch myself doing something manually for the third time, I start looking for a way to automate it.</p>
     <p>Outside work, I read, walk and lift weights. I also regularly try to convince my friends to move to my side of town so we can do all three together.</p>
@@ -192,6 +196,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
       <li><span class="n">3</span><div><h3>Hires who stay</h3><p>Every person I've hired so far has passed probation, and none have left yet. I'm proud of that. Getting someone through the door matters, but so does finding someone who wants to stay.</p></div></li>
       <li><span class="n">4</span><div><h3>Understanding a culture before hiring into it</h3><p>I take time to understand how a team operates, what it values and what makes someone successful in that environment. I don't just look for someone who can do the job. I look for someone who can thrive in the context they'll be doing it in.</p></div></li>
     </ul>
+    <ul class="chips" style="margin:26px 0 0"><li>Adaptable</li><li>People-oriented</li><li>Inventive</li></ul>
   </div>
 </div></section>
 
@@ -199,20 +204,19 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
   <div class="side"><p class="label">03 School</p><h2>The long way round</h2><p class="s">Three qualifications, one winding road.</p></div>
   <div class="body">
     <ul class="edu">
-      <li><div class="crest" aria-label="Kenyatta University">KU<img src="logos/ku.png" alt="" onerror="this.remove()"></div><div>
+      <li><div class="crest" aria-label="Kenyatta University">KU<img src="ku.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">BA &middot; Counselling Psychology</p><h3>Kenyatta University</h3>
         <p>Counselling Psychology wasn't quite the fit I'd imagined. I enjoyed understanding people, but the way the discipline was taught didn't give me the intellectual variety I was looking for.</p>
-        <p>During my third year, I stepped away and explored business studies before eventually returning to complete my degree during the pandemic.</p></div></li>
-      <li><div class="crest" aria-label="African Leadership University">ALU<img src="logos/alu.png" alt="" onerror="this.remove()"></div><div>
+        <p>During my third year, I stepped away and explored business studies before eventually returning to complete my degree during the Covid-19 pandemic.</p></div></li>
+      <li><div class="crest" aria-label="African Leadership University">ALU<img src="alu.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">International Business and Trade</p><h3>African Leadership University</h3>
         <p>ALU introduced me to a very different way of learning: practical, hands-on and grounded in solving real problems. It's also where my interest in data began.</p>
         <p>It taught me to question things, connect ideas and think beyond the obvious. Looking back, it shaped much of how I approach work today.</p></div></li>
-      <li><div class="crest" aria-label="University of Liverpool">UoL<img src="logos/uol.png" alt="" onerror="this.remove()"></div><div>
+      <li><div class="crest" aria-label="University of Liverpool">UoL<img src="uol.png" alt="" onerror="this.remove()"></div><div>
         <p class="m">MSc &middot; Data Science and AI</p><h3>University of Liverpool</h3>
         <p>I started my master's in 2025 and have since taken a break.</p>
-        <p>I realised I was struggling with a learning environment that felt quite different from what I'd experienced at ALU. I want to return to postgraduate study, but I also want to find an institution and learning environment that work better for how I think and learn.</p></div></li>
+        <p>I realised I was struggling with a learning environment that felt quite different from what I'd experienced at ALU. I want to return to postgraduate study, but I also want to find an institution and learning environment that works better for how I think and learn.</p></div></li>
     </ul>
-    <p style="margin-top:26px"><strong>Up next:</strong> more reading, starting with <em>Thinking in Systems</em>.</p>
   </div>
 </div></section>
 
@@ -255,15 +259,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="shelf"><div class="wrap grid">
   <div class="side"><p class="label">06 Shelf</p><h2>Reading</h2><p class="s">Honest opinions, no stars.</p></div>
   <div class="body"><div class="books">
-    <div class="book"><div class="cover c1">Tomorrow Died Yesterday<img src="covers/tomorrow-died-yesterday.jpg" alt="" onerror="this.remove()"></div><div>
+    <div class="book"><div class="cover c1">Tomorrow Died Yesterday<img src="tomorrow-died-yesterday.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Tomorrow Died Yesterday</h3><p class="au">Chimeka Garricks</p>
       <p>I loved it. The Asiama chapter, where soldiers go on a revenge mission, undid me. I read it at a sports club, holding back tears, wondering how Amaibi still found a way to acknowledge God after all that happened. I only wish it had been edited more: stray errors pulled me out of writing that is genuinely brilliant.</p>
       <span class="verdict">Loved it</span></div></div>
-    <div class="book"><div class="cover c2">Daring Greatly<img src="covers/daring-greatly.jpg" alt="" onerror="this.remove()"></div><div>
+    <div class="book"><div class="cover c2">Daring Greatly<img src="daring-greatly.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Daring Greatly</h3><p class="au">Brené Brown</p>
       <p>Not for me. I do not like a book that arrives already labelled as personal development. I would rather read, think, and pull my own lessons out of it. That is where the critical thinking happens.</p>
       <span class="verdict">Mixed</span></div></div>
-    <div class="book"><div class="cover c3">Thinking in Systems<img src="covers/thinking-in-systems.jpg" alt="" onerror="this.remove()"></div><div>
+    <div class="book"><div class="cover c3">Thinking in Systems<img src="thinking-in-systems.jpg" alt="" onerror="this.remove()"></div><div>
       <h3>Thinking in Systems</h3><p class="au">Donella Meadows</p>
       <p>Up next, hopefully. I will report back.</p>
       <span class="verdict">On deck</span></div></div>
@@ -273,11 +277,15 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 <section id="places"><div class="wrap grid">
   <div class="side"><p class="label">07 Places</p><h2>Cities I love</h2><p class="s">African cities I have visited and would happily go back to.</p></div>
   <div class="body"><div class="places">
-    <div class="place"><div class="ph p1"><span>Dar es Salaam</span><img src="photos/dar-es-salaam.jpg" alt="" onerror="this.remove()"></div><p class="meta">Tanzania &middot; 2024</p><h3>Dar es Salaam</h3><p>Libras chase balance, and Dar gets it right: sea air and a city that keeps moving, easy company and easy quiet. It suits how I like to live, a little social and a little slow, in equal measure.</p></div>
-    <div class="place"><div class="ph p2"><span>Mauritius</span><img src="photos/mauritius.jpg" alt="" onerror="this.remove()"></div><p class="meta">Mauritius</p><h3>Mauritius</h3><p>An island that still has a city in it. You get the beach days and the buzz without having to pick one.</p></div>
-    <div class="place"><div class="ph p3"><span>Kampala</span><img src="photos/kampala.jpg" alt="" onerror="this.remove()"></div><p class="meta">Uganda</p><h3>Kampala</h3><p>My twenties owe this city a thank you. The nights out, the people, the noise: just enough chaos to shake up a home-body remote worker who mostly lives at a slower pace.</p></div>
-    <div class="place"><div class="ph p4"><span>Accra</span><img src="photos/accra.jpg" alt="" onerror="this.remove()"></div><p class="meta">Ghana</p><h3>Accra</h3><p>I went with some of my favourite colleagues, which made it. Karaoke at The Honeysuckle and jollof at The Buka in Osu are both worth a second trip. We had a Timmmmeeee.</p></div>
-    <div class="place"><div class="ph p5"><span>Diani</span><img src="photos/diani.jpg" alt="" onerror="this.remove()"></div><p class="meta">Kenya &middot; 2022 and 2023</p><h3>Diani Beach</h3><p>I lost count of how many times I went in those two years. Think of it as Dar's little cousin: the same sea, a smaller and softer pace. Still a favourite.</p></div>
+    <div class="place wide"><div class="ph p6"><span>Kigali</span><img src="kigali.jpg" alt="" onerror="this.remove()"></div><p class="meta">Rwanda &middot; home, 2017 to 2022</p><h3>Kigali</h3>
+      <p>Kigali was home between 2017 and 2022, and I've returned several times since. I arrived as a rather naive 22- or 23-year-old with a lot of growing up still ahead of me. Living in the city and studying at a multinational university exposed me to people, cultures and experiences that shaped me in ways I only fully appreciate now.</p>
+      <p>I learnt a lot about girlhood from the coolest twins I was lucky enough to call housemates: make-up, impromptu photoshoots, cheap shots on Fridays, and dancing and vibing to Hurtin' Me by French Montana and Stefflon Don and Young, Dumb &amp; Broke by Khalid.</p>
+      <p>Kigali gave me some of my favourite memories, lifelong friendships and, quite honestly, a good chunk of my rizz.</p></div>
+    <div class="place"><div class="ph p1"><span>Dar es Salaam</span><img src="dar-es-salaam.jpg" alt="" onerror="this.remove()"></div><p class="meta">Tanzania &middot; 2024</p><h3>Dar es Salaam</h3><p>Libras chase balance, and Dar gets it right: sea air and a city that keeps moving, easy company and easy quiet. It suits how I like to live, a little social and a little slow, in equal measure.</p></div>
+    <div class="place"><div class="ph p2"><span>Mauritius</span><img src="mauritius.jpg" alt="" onerror="this.remove()"></div><p class="meta">Mauritius</p><h3>Mauritius</h3><p>An island that still has a city in it. You get the beach days and the buzz without having to pick one.</p></div>
+    <div class="place"><div class="ph p3"><span>Kampala</span><img src="kampala.jpg" alt="" onerror="this.remove()"></div><p class="meta">Uganda</p><h3>Kampala</h3><p>My twenties owe this city a thank you. The nights out, the people, the noise: just enough chaos to shake up a home-body remote worker who mostly lives at a slower pace.</p></div>
+    <div class="place"><div class="ph p4"><span>Accra</span><img src="accra.jpg" alt="" onerror="this.remove()"></div><p class="meta">Ghana</p><h3>Accra</h3><p>I went with some of my favourite colleagues, which made it. Karaoke at The Honeysuckle and jollof at The Buka in Osu are both worth a second trip. We had a Timmmmeeee.</p></div>
+    <div class="place"><div class="ph p5"><span>Diani</span><img src="diani.jpg" alt="" onerror="this.remove()"></div><p class="meta">Kenya &middot; 2022 and 2023</p><h3>Diani Beach</h3><p>I lost count of how many times I went in those two years. Think of it as Dar's little cousin: the same sea, a smaller and softer pace. Still a favourite.</p></div>
   </div></div>
 </div></section>
 
